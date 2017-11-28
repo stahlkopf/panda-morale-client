@@ -1,0 +1,55 @@
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+.cc-selector-2 input{
+    position:absolute;
+    z-index:999;
+}
+.VeryHappy{background-image:url("assets/panda5.png");}
+.Happy{background-image:url('assets/panda4.png');}
+.Neutral{background-image:url('assets/panda3.png');}
+.Unhappy{background-image:url('assets/panda2.png');}
+.VeryUnhappy{background-image:url('assets/panda1.png');}
+.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
+
+.cc-selector input:active +.happiness-cc{opacity: .9;}
+.cc-selector input:checked +.happiness-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.cc-selector-2 input:active +.happiness-cc, .cc-selector input:active +.happiness-cc{opacity: .9;}
+.cc-selector-2 input:checked +.happiness-cc, .cc-selector input:checked +.happiness-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.happiness-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:75px;height:75px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+            -webkit-filter: brightness(1.2);
+               -moz-filter: brightness(1.2);
+                    filter: brightness(1.2);
+        }
+}
+.happiness-cc:hover{
+    -webkit-filter: brightness(1.0) grayscale(.1) opacity(.9);
+       -moz-filter: brightness(1.0) grayscale(.1) opacity(.9);
+            filter: brightness(1.0) grayscale(.1) opacity(.9);
+}
+
+/* Extras */
+a:visited{color:#888}
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}

@@ -1,0 +1,15 @@
+{
+  "name": "panda-morale-client",
+  "version": "1.0.0",
+  "description": "A starter for menubar project",
+  "dependencies": {
+    "menubar": "*",
+    "electron-packager": "^5.1.0",
+    "electron-prebuilt": "^0.36.0"
+  },
+  "main": "main.js",
+  "scripts": {
+    "build": "electron-packager . panda-morale-client --platform=darwin --arch=x64 --version=0.36.0 --icon=Icon.icns",
+    "start": "electron ."
+  }
+}
