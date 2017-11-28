@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="nodeTodo">
 
 <head>
 
@@ -42,15 +42,15 @@
 
 
           <div class="cc-selector-2">
-              <input id="VeryHappy" type="radio" name="credit-card" value="VeryHappy" />
+              <input id="VeryHappy" type="radio" name="credit-card" value="3" ng-model="formData.happiness" />
               <label class="happiness-cc VeryHappy" for="VeryHappy"></label>
-              <input id="Happy" type="radio" name="credit-card" value="Happy" />
+              <input id="Happy" type="radio" name="credit-card" value="2" ng-model="formData.happiness" />
               <label class="happiness-cc Happy" for="Happy"></label>
-              <input id="Neutral" type="radio" name="credit-card" value="Neutral" />
+              <input id="Neutral" type="radio" name="credit-card" value="1" ng-model="formData.happiness" />
               <label class="happiness-cc Neutral"for="Neutral"></label>
-              <input id="Unhappy" type="radio" name="credit-card" value="Unhappy" />
+              <input id="Unhappy" type="radio" name="credit-card" value="-2" ng-model="formData.happiness" />
               <label class="happiness-cc Unhappy" for="Unhappy"></label>
-              <input id="VeryUnhappy" type="radio" name="credit-card" value="VeryUnhappy" />
+              <input id="VeryUnhappy" type="radio" name="credit-card" value="-3" ng-model="formData.happiness" />
               <label class="happiness-cc VeryUnhappy" for="VeryUnhappy"></label>
 
       </div>
@@ -72,6 +72,7 @@
 
 
     <!-- Bootstrap Core JavaScript -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
 </body>
