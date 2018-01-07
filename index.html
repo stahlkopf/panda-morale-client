@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html ng-app="nodeTodo">
   <head>
-    <title>Todo App - with Node + Express + Angular + PostgreSQL</title>
+    <title>Panda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body ng-controller="mainController">
     <div class="container-fluid">
-          <div><h5>How are you currently feeling?</h5></div>
-        <div class="row  d-flex align-items-center">
+
         <form>
-          <div class="form-group">
+      <h5>How are you currently feeling?</h5>
             <div class="cc-selector-2">
                 <input id="VeryHappy" type="radio" name="credit-card" value="3" ng-model="formData.happiness" />
                 <label class="happiness-cc VeryHappy" for="VeryHappy"></label>
@@ -28,19 +26,25 @@
                 <label class="happiness-cc Unhappy" for="Unhappy"></label>
                 <input id="VeryUnhappy" type="radio" name="credit-card" value="-3" ng-model="formData.happiness" />
                 <label class="happiness-cc VeryUnhappy" for="VeryUnhappy"></label>
-        </div>
-        <div class="row  d-flex align-items-center">
-<div class="col d-flex align-items-center">
-                          <input type="text" class="form-control input-sm" placeholder="Enter optional explanation." ng-model="formData.text">
-                        <button type="submit" class="btn btn-primary" ng-click="createTodo()">Submit</button>
-                      </div>
+            </div>
+        <div class="form-group">
+        <input type="text" class="form-control input-sm" id="explanation" placeholder="Optional Explanation" ng-model="formData.text">
+      </div>
+        <div class="form-group">
+          <label class="form-check-label">
+              <input type="checkbox" class="form-check-input"  ng-model="formData.anonymous">
+                Anonymize
+          </label>
+
+
+          <button type="submit" class="btn btn-primary" ng-click="createTodo()">Submit</button>
         </div>
         </form>
-      </div>
+
 
     </div>
     <script src="http://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
     <script src="js/app.js"></script>
   </body>
