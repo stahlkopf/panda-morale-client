@@ -17,4 +17,5 @@ mb.on('ready', function ready(){
 
 mb.on('after-create-window', function windowLoaded(){
 	console.log('App started');
+	mb.window.openDevTools();
 });

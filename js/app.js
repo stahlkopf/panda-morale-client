@@ -6,8 +6,9 @@ angular.module('nodeTodo', [])
 
   // Create a new todo
   $scope.createTodo = () => {
-
-    $scope.formData.userid = require("os").userInfo().username;
+    var userInfo = require('user-info');
+    var userName = userInfo().username;
+    $scope.formData.userid = userName;
     $http.post('http://localhost:3000/api/v1/todos', $scope.formData)
     .success((data) => {
       $scope.formData = {};
