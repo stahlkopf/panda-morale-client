@@ -14,17 +14,31 @@
     <div class="container-fluid">
 
         <form>
+      <button id="btn_hide" type="button" class="close" data-dismiss="modal">&times;</button>
       <h5>How are you currently feeling?</h5>
+<script>
+  const {remote} = require('electron');
+  const btnHide = document.querySelector('#btn_hide');
+  btnHide.addEventListener('click', () => {
+      const win = remote.BrowserWindow.getFocusedWindow();
+      win.hide();
+  })
+</script>
             <div class="cc-selector-2">
-                <input id="VeryHappy" type="radio" name="credit-card" value="3" ng-model="formData.happiness" />
+                <input id="VeryHappy" type="radio" name="credit-card" value="3" ng-model="formData.happiness"  required
+                 oninvalid="this.setCustomValidity('Please select a face that best represents your mood')" oninput="setCustomValidity('')" />
                 <label class="happiness-cc VeryHappy" for="VeryHappy"></label>
-                <input id="Happy" type="radio" name="credit-card" value="2" ng-model="formData.happiness" />
+                <input id="Happy" type="radio" name="credit-card" value="2" ng-model="formData.happiness"  required
+                 oninvalid="this.setCustomValidity('Please select a face that best represents your mood')" oninput="setCustomValidity('')" />
                 <label class="happiness-cc Happy" for="Happy"></label>
-                <input id="Neutral" type="radio" name="credit-card" value="1" ng-model="formData.happiness" />
+                <input id="Neutral" type="radio" name="credit-card" value="1" ng-model="formData.happiness"  required
+                 oninvalid="this.setCustomValidity('Please select a face that best represents your mood')" oninput="setCustomValidity('')" />
                 <label class="happiness-cc Neutral"for="Neutral"></label>
-                <input id="Unhappy" type="radio" name="credit-card" value="-2" ng-model="formData.happiness" />
+                <input id="Unhappy" type="radio" name="credit-card" value="-2" ng-model="formData.happiness"  required
+                 oninvalid="this.setCustomValidity('Please select a face that best represents your mood')" oninput="setCustomValidity('')" />
                 <label class="happiness-cc Unhappy" for="Unhappy"></label>
-                <input id="VeryUnhappy" type="radio" name="credit-card" value="-3" ng-model="formData.happiness" />
+                <input id="VeryUnhappy" type="radio" name="credit-card" value="-3" ng-model="formData.happiness"  required
+                 oninvalid="this.setCustomValidity('Please select a face that best represents your mood')" oninput="setCustomValidity('')" />
                 <label class="happiness-cc VeryUnhappy" for="VeryUnhappy"></label>
             </div>
         <div class="form-group">
